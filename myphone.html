@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Telephone</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+	<script src="bootstrap-4.5.0-dist/js/jquery.js"></script>
+	<script type="text/javascript" src="bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="myphone.css">
+</head>
+<body>
+	<div class="container">
+<center>
+	<div class="pt-3">
+
+		<div id="calling" class="bg-success">
+	<h6 class="text-white text-center pt-4" id="phonenum"></h6>
+	<p class="text-center text-white" id="network"></p>
+	<p class="text-center text-white" style="margin-top: -10px;" id="ringing">Ringing...</p>
+	<div class="text-center text-white">
+		<span id="hrs">00</span><span>:</span><span id="mins">00</span><span>:</span><span id="secs">00</span>
+	</div>
+	<div class="mt-5 container">
+		
+	</div><br><br><br><br><br>
+	<img onclick="endCall()" src="images/endcall.png" width="50px" height="50px;" style="cursor: pointer; margin-left: ;">
+</div>
+
+	<div id="box1" ondblclick="openMe()">
+		<div id="img" class="w-100 h-100" style="display: none; border-top-right-radius: 30px; border-top-left-radius: 30px; height: 470px; border: none;">
+		<img src="images/BKG ROAD.jpg" class="w-100 shadow-lg" height="470px;" style="border-top-right-radius: 30px; border-top-left-radius: 30px;">
+
+		<div id="time" class="text-white text-center" style="margin-top: -420px; font-size: 30px;"></div>
+
+		<div class="form-group col">
+			<input type="text" placeholder="Google Search" class="form-control" name="" style="border-radius: 20px;">
+		</div>
+		<img src="images/call.png" onclick="callUs()" style="margin-top: 260px; height: 50px; cursor: pointer; margin-left:10px;">
+		<img src="images/icon.png" onclick="iconMe()" height="30px;" style="cursor: pointer; margin-top: 260px; margin-left: 40px;">
+		<img src="images/backward.png" onclick="backMe()" style="margin-top: 260px; height: 50px; cursor: pointer; margin-left: 55px;">
+
+		</div>
+	</div>
+
+	<div id="icons" ondblclick="goBack()" style="width: 250px; display: none; border-top-left-radius: 30px; border-top-right-radius: 30px; height: 470px; margin-top: -470px;">
+				<a target="blank" href="https://www.google.com"><img data-toggle="tooltip" title="Google Chrome" class="" src="images/chrome.png" height="50px;" width="50px;" style="cursor: pointer;"></a>
+
+				<a target="blank" href="https://instagram.com"><img data-toggle="tooltip" title="Instagram" class="ml-3" src="images/instagram.png" height="50px;" width="50px;" style="cursor: pointer;"></a>
+
+				<a target="blank" href="https://whatsapp.com"><img data-toggle="tooltip" title="Whatsapp" class="ml-3" src="images/whatsapp.png" style="cursor: pointer;"></a>
+				<br>
+				<a target="blank" href="https://twitter.com"><img data-toggle="tooltip" title="Twitter" class="pt-3" src="images/twitter.png" style="cursor: pointer;"></a>
+
+				<a target="blank" href="C:/Users/YEMISHOT/Desktop/HTML/boostrap/gencard.html"><img data-toggle="tooltip" title="World Wide Web" class="ml-3 pt-3" src="images/icons8_Globe_48px.png" style="cursor: pointer;"></a>
+
+				<img data-toggle="tooltip" title="Wi-Fi" class="ml-3 pt-3" src="images/wifi.png" style="cursor: pointer;">
+				<br>
+				<img data-toggle="tooltip" title="Settings" class="pt-3" src="images/settings.png" style="cursor: pointer;">
+
+				<img data-toggle="tooltip" title="Microsoft Edge" src="images/icons8_Microsoft_Edge_50px.png" class="ml-3 pt-3" style="cursor: pointer;">
+
+				<a target="blank" href="https://LinkedIn.com"><img data-toggle="tooltip" title="LinkedIn" src="images/icons8_LinkedIn_48px.png" class="ml-3 pt-3" style="cursor: pointer;"></a>
+				<br>
+				<a target="blank" href="https://www.facebook.com"><img data-toggle="tooltip" title="Facebook" src="images/icons8_Facebook_48px_1.png" class="pt-3" style="cursor: pointer;"></a>
+
+				<a target="blank" href="https://messenger/facebook.com"><img data-toggle="tooltip" title="Messenger" src="images/icons8_Facebook_Messenger_48px.png" class="ml-3 pt-3" style="cursor: pointer;"></a>
+
+				<a target="blank" href="https://skype.com"><img data-toggle="tooltip" title="Skype" src="images/icons8_Skype_52px.png" class="ml-3 pt-3" style="cursor: pointer;"></a>
+				<br>
+				<img data-toggle="tooltip" title="HP" src="images/icons8_HP_50px_2.png" class="pt-3" style="cursor: pointer;">
+				<img data-toggle="tooltip" title="Dell" src="images/icons8_Dell_50px.png" class="ml-3 pt-3" style="cursor: pointer;">
+
+				<img data-toggle="tooltip" title="USB" src="images/icons8_USB_48px.png" class="ml-3 pt-3" style="cursor: pointer;">
+				<br>
+				<img onclick="nextMe()" src="images/next.png" data-toggle="tooltip" title="Next" class="ml-3 pt-3 float-right" style="cursor: pointer; width: 50px; height: 50px;">
+			</div>
+
+				<div id="icon1" ondblclick="goBack()" style="width: 250px; display: none; border-top-left-radius: 30px; border-top-right-radius: 30px; height: 470px; margin-top: -470px;">
+				<a target="blank" href="https://Opera.com"><img data-toggle="tooltip" title="Opera" class="" src="images/icons8_Opera_50px.png" height="50px;" width="50px;" style="cursor: pointer;"></a>
+
+				<a target="blank" href="https://maps.google.com"><img data-toggle="tooltip" title="Maps" class="ml-3" src="images/icons8_Google_Maps_48px.png" height="50px;" width="50px;" style="cursor: pointer;"></a>
+
+				<a target="blank" href="https://accounts.google.com"><img data-toggle="tooltip" title="Google Mail" class="ml-3" src="images/icons8_Gmail_48px.png" style="cursor: pointer;"></a>
+				<br>
+				<img data-toggle="tooltip" title="Firefox" class="pt-3" src="images/icons8_Firefox_48px.png" style="cursor: pointer;">
+
+				<img data-toggle="tooltip" title="Photos" class="ml-3 pt-3" src="images/icons8_Google_Photos_48px.png" style="cursor: pointer;">
+
+				<a target="blank" href="https://playstore.com"><img data-toggle="tooltip" title="PlayStore" class="ml-3 pt-3" src="images/icons8_Google_Play_48px.png" style="cursor: pointer;"></a>
+				<br>
+				<img data-toggle="tooltip" title="PhoneStore" class="pt-3" src="images/icons8_Windows_Phone_Store_48px.png" style="cursor: pointer;">
+
+				<img data-toggle="tooltip" title="VLC" src="images/icons8_VLC_48px.png" class="ml-3 pt-3" style="cursor: pointer;">
+
+				<a target="blank" href="https://getjquery.com"><img data-toggle="tooltip" title="Jquery" src="images/icons8_JQuery_50px.png" class="ml-3 pt-3" style="cursor: pointer;"></a>
+				<br>
+				<a target="blank" href="https://github.com"><img data-toggle="tooltip" title="Git" src="images/icons8_Git_48px.png" class="pt-3" style="cursor: pointer;"></a>
+
+				<img data-toggle="tooltip" title="OneNote" src="images/icons8_Microsoft_OneNote_48px.png" class="ml-3 pt-3" style="cursor: pointer;">
+				<img data-toggle="tooltip" title="Sublime Text" src="images/icons8_Sublime_Text_48px.png" class="ml-3 pt-3" style="cursor: pointer;"><br>
+				<img data-toggle="tooltip" title="Xbox" src="images/icons8_Xbox_48px.png" class="pt-3" style="cursor: pointer;">
+				<a target="blank" href="https://www.youtube.com"><img data-toggle="tooltip" title="YouTube" src="images/icons8_YouTube_Squared_50px.png" class="ml-3 pt-3" style="cursor: pointer;"></a>
+				<img data-toggle="tooltip" title="Python" src="images/icons8_Python_48px.png" class="ml-3 pt-3" style="cursor: pointer;"><br><br><br>
+				<img onclick="prevIcon()" data-toggle="tooltip" title="Prev" class="text-success" src="images/prev.png" class="pt-5" style="cursor: pointer; width: 30px; height: 30px;">
+				<img src="images/backward.png" class="pt-1 pr-3" onclick="backMe()" style="cursor: pointer; width: 50px; height: 50px; margin-left: ">
+			</div>
+
+			
+	<div id="box2" class="" style="display: none; margin-top: -500px; margin-left: 0px;">
+		<div class="bg-white" style="border-top-right-radius: 30px; width: 240px; border-top-left-radius: 30px; height: 470px;"><br><br><br>
+			<div id="plswait" class="mt-5 pt-5" style="display: none; text-align: center;">
+				<span class="spinner-border spinner-border-sm mr-2 text-warning" style="width: 25px; height: 25px;"></span>Please wait.....
+			</div>
+			<div id="response" ondblclick="backMe()" class="mt-5" style="display: none;"></div>
+			<div id="optcall" style="display: none; text-align: justify;">
+				<h4>Call with</h4>
+				<p><input onclick="ringMtn()" type="button" value="MTN NG" name="" class="text-warning bg-white" style="border: none;"></p>
+				<p><input onclick="ringGlo()" type="button" value="GLO NG" name="" class="text-success bg-white" style="border: none;"></p>
+				<p><input onclick="ringAirtel()" type="button" value="AIRTEL NG" name="" class="text-danger bg-white" style="border: none;"></p>
+				<p><input onclick="ring9mobile()" type="button" value="9MOBILE NG" name="" class="text-info bg-white" style="border: none;"></p>
+			</div>
+			<div id="callcenter">
+				<div class="input-group">
+			<input type="text" id="display" maxlength="22" class="bg-light" style="margin-left: 10px;">
+			<div class="input-group-prepend" style="margin-top: -50px; border: none;">
+				<span class="input-group-text" onclick="delMe()" style="cursor: pointer;">x</span>
+			</div>
+				</div>
+		<div class="pt-3">
+		<span onclick="myButton(1)" class="pt-3 text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">1</span>
+		<span onclick="myButton(2)" class="pl-5 pt-3 text-center text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">2</span>
+		<span onclick="myButton(3)" class="pl-5 pt-3 text-center text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">3</span>
+		</div>
+		<div class="pt-3">
+		<span onclick="myButton(4)" class="pt-3 text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">4</span>
+		<span onclick="myButton(5)" class="pl-5 pt-3 text-center text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">5</span>
+		<span onclick="myButton(6)" class="pl-5 pt-3 text-center text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">6</span>
+		</div>
+		<div class="pt-3">
+		<span onclick="myButton(7)" class="pt-3 text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">7</span>
+		<span onclick="myButton(8)" class="pl-5 pt-3 text-center text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">8</span>
+		<span onclick="myButton(9)" class="pl-5 pt-3 text-center text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">9</span>
+		</div>
+		<div class="pt-3">
+		<span onclick="myButton('*')" class="pt-3 text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">*</span>
+		<span onclick="myButton(0)" class="pl-5 pt-3 text-center text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">0</span>
+		<span onclick="myButton('#')" class="pl-5 pt-3 text-center text-success" style="font-family: arial; font-size: 30px; cursor: pointer;">#</span>
+		<!-- <div style="justify-content: center;"> -->
+
+		<img src="images/call.png" class="ml-5 pl-5 pt-2" style="cursor: pointer;" onclick="callMe()">
+		<img src="images/next.png" class="pl-4 pt-2 text-success" onclick="backMe()" style="cursor: pointer;">
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+</center>
+
+
+
+<div class="box">
+		<div id="calling2" class="bg-success" style="display: none; margin-left: 60px; height: 470px; width: 240px; border-top-left-radius: 30px; border-top-right-radius: 30px; border: 3px solid black; border-bottom: 30px solid black; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; margin-top: -450px;">
+	<h6 class="text-white text-center pt-4">+2348071265308</h6>
+	<p class="text-center text-white" id="network2"></p>
+	<p class="text-center text-white" style="margin-top: -10px;" id="rings">Incoming Call...</p>
+	<div class="text-center text-white">
+		<span id="hrs2">00</span><span>:</span><span id="mins2">00</span><span>:</span><span id="secs2">00</span>
+	</div>
+	<div class="mt-5 container">
+		
+	</div><br><br><br><br><br>
+	<img class="ml-5" onclick="endCall2()" src="images/endcall.png" width="50px" height="50px;" style="cursor: pointer; float: left;">
+	<img onclick="receiveCall()" class="mr-5" src="images/receivecall.png" width="50px" height="50px;" style="cursor: pointer; float: right;">
+</div>
+
+
+<script type="text/javascript" src="myphone.js"></script>
+</body>
+</html>
