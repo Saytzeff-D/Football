@@ -5,47 +5,51 @@ class Keeper{
     Defense = 78;
     Dribble = 56;
     Speed = 40;
+    constructor(changedName){
+        this.changedName = changedName
+    }
     disKeeper(){
         var data = "";
-        data += "<table border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th></tr>";
-        var res = "<td>" + this.Name + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button>GK</button>"  + "</td>" + "<td>" + "<button>DF</button>"  + "</td>" + "<td>" + "<button>MFK</button>"  + "</td>" + "<td>" + "<button>SK</button>"  + "</td>";
+        data += "<table class='table-responsive' border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
+        var res = "<td>" + this.changedName == '' ? this.Name : this.changedName + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='obj.disKeeper()' class='btn btn-dark' >GK</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >DF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >MF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >SR</button>"  + "</td>";
         var sumdata = "<tr>" + res + "</tr>";
         data += sumdata;
-        result.innerHTML += data + "</table>";
+        result.innerHTML = data + "</table>";
     }
 }
-var obj = new Keeper;
+var obj = new Keeper('');
 class Defender{
     Name = "Jose Yobo";
-    constructor(Attack, Stamina, Defense, Dribble, Speed){
+    constructor(Attack, Stamina, Defense, Dribble, Speed, changedName){
         this.Attack = Attack;
         this.Stamina = Stamina;
         this.Defense = Defense;
         this.Dribble = Dribble;
         this.Speed = Speed;
+        this.changedName = changedName
     }
     disDefend(){
         var data1 = "";
-        data1 += "<table border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
-        var res1 = "<td>" + this.Name + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button>GK</button>"  + "</td>" + "<td>" + "<button>DF</button>"  + "</td>" + "<td>" + "<button>MF</button>"  + "</td>" + "<td>" + "<button>SK</button>"  + "</td>";
+        data1 += "<table class='table-responsive' border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
+        var res1 = "<td>" + this.changedName == '' ? this.Name : this.changedName + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='obj.disKeeper()' class='btn btn-dark' >GK</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >DF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >MF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >SR</button>"  + "</td>";
         var sumdata = "<tr>" + res1 + "</tr>";
         data1 +=sumdata;
-        result.innerHTML += data1 + "</table>";
+        result.innerHTML = data1 + "</table>";
     }
 }
-var obj1 = new Defender(87, 90, 92, 60, 70);
+var obj1 = new Defender(87, 90, 92, 60, 70, '');
 class Defender2 extends Defender{
     Name = "Pogba Desa";
 }
-var obj2 = new Defender2(87, 90, 92, 60, 70);
+var obj2 = new Defender2(87, 90, 92, 60, 70, '');
 class Defender3 extends Defender{
     Name = "Ivon Ekong";
 }
-var obj3 = new Defender3(87, 90, 92, 60, 70);
+var obj3 = new Defender3(87, 90, 92, 60, 70, '');
 class Defender4 extends Defender{
     Name = "Temi Oke";
 }
-var obj4 = new Defender4(87, 90, 92, 60, 70);
+var obj4 = new Defender4(87, 90, 92, 60, 70, '');
 class Midfielder{
     Name = "Chuks Eno";
     constructor(Attack, Stamina, Defense, Dribble, Speed){
@@ -57,11 +61,11 @@ class Midfielder{
     }
     midFielder(){
         var data2 = "";
-        data2 += "<table border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
-        var res2 = "<td>" + this.Name + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button>GK</button>"  + "</td>" + "<td>" + "<button>DF</button>"  + "</td>" + "<td>" + "<button>MF</button>"  + "</td>" + "<td>" + "<button>SK</button>"  + "</td>";
+        data2 += "<table class='table-responsive' border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
+        var res2 = "<td>" + this.Name + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='obj.disKeeper()' class='btn btn-dark' >GK</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >DF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >MF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >SR</button>"  + "</td>";
         var sumdata = "<tr>" + res2 + "</tr>";
         data2 +=sumdata;
-        result.innerHTML += data2 + "</table>";
+        result.innerHTML = data2 + "</table>";
     }
 }
 if (formation.value == "4-3-3" || "3-4-3" || "4-4-2") {
@@ -93,11 +97,11 @@ class Striker{
     }
     disStriker(){
         var data3 = "";
-        data3 += "<table border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
-        var res3 = "<td>" + this.Name + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='goalKeep()'>GK</button>"  + "</td>"  + "<td>" + "<button>DF</button>"  + "</td>"  + "<td>" + "<button>MF</button>"  + "</td>"  + "<td>" + "<button>SK</button>"  + "</td>";
+        data3 += "<table class='table-responsive' border='1px' solid black ><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
+        var res3 = "<td>" + this.Name + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='obj.disKeeper()' class='btn btn-dark' onclick='goalKeep()'>GK</button>"  + "</td>"  + "<td>" + "<button class='btn btn-dark' >DF</button>"  + "</td>"  + "<td>" + "<button class='btn btn-dark' >MF</button>"  + "</td>"  + "<td>" + "<button class='btn btn-dark' >SR</button>"  + "</td>";
         var sumdata = "<tr>" + res3 + "</tr>";
         data3 +=sumdata;
-        result.innerHTML += data3 + "</table>";
+        result.innerHTML = data3 + "</table>";
     }
 }
 var obj8 = new Striker(63, 79, 50, 96, 88);
@@ -111,9 +115,8 @@ class Striker3 extends Striker{
     Name = "C.Ronaldo";
 }
 var obj10 = new Striker3(63, 79, 50, 96, 88);
-function disAppear() {
-    result.style.display = "none";
-    box1.style.marginLeft = '0px';
+function goalKeep () {
+    alert()
 }
 function changeFormation() {
     if (formation.value == "4-3-3") {

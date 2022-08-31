@@ -3,6 +3,10 @@
 <head>
 	<title>Football</title>
 	<link rel="stylesheet" type="text/css" href="myFootball.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 </head>
 <body>
 	<center>
@@ -14,7 +18,7 @@
 		<option style="background-color: black;">5-4-1</option>
 		<option style="background-color: black;">5-3-2</option>
 	</select>
-	<button onclick="changeFormation()" class="btn">Change Formation</button>
+	<button onclick="changeFormation()" class="ball-btn">Change Formation</button>
 	</center>
 	<br>
 	<center><div id="fieldLine">
@@ -33,55 +37,68 @@
 	<div id="semicircleRight"></div><br><br>
 	
 		<div id="p1">
-			<button id="btn1" onclick="obj.disKeeper()" style="border: none; background-color: orange; box-shadow: 3px 3px 5px black; width: 20px;
+			<button id="btn1" data-toggle="modal" data-target="#playerModal" onclick="obj.disKeeper()" style="border: none; background-color: orange; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p2">
-			<button onclick="obj1.disDefend()" id="btn2" style="border: none; background-color: blue; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj1.disDefend()" id="btn2" style="border: none; background-color: blue; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p3">
-			<button onclick="obj2.disDefend()" id="btn3" style="border: none; background-color: blue; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj2.disDefend()" id="btn3" style="border: none; background-color: blue; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border: none; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p4">
-			<button onclick="obj3.disDefend()" id="btn4" style="border: none; background-color: blue; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj3.disDefend()" id="btn4" style="border: none; background-color: blue; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p5">
-			<button onclick="obj4.disDefend()" id="btn5" style="border: none; background-color: blue; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj4.disDefend()" id="btn5" style="border: none; background-color: blue; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p6">
-			<button onclick="obj5.midFielder()" id="btn6" style="border: none; background-color: violet; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj5.midFielder()" id="btn6" style="border: none; background-color: violet; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p7">
-			<button onclick="obj6.midFielder()" id="btn7" style="border: none; background-color: violet; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj6.midFielder()" id="btn7" style="border: none; background-color: violet; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p8">
-			<button onclick="obj7.midFielder()" id="btn8" style="border: none; background-color: violet; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj7.midFielder()" id="btn8" style="border: none; background-color: violet; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p9">
-			<button onclick="obj8.disStriker()" id="btn9" style="border: none; background-color: red; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj8.disStriker()" id="btn9" style="border: none; background-color: red; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 		<div id="p10">
-			<button onclick="obj9.disStriker()" id="btn10" style="border: none; background-color: red; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj9.disStriker()" id="btn10" style="border: none; background-color: red; width: 20px;
 		height: 20px; border-radius: 20px; box-shadow: 3px 3px 5px black; color: white;"></button>
 	</div>
 		<div id="p11">
-			<button onclick="obj10.disStriker()" id="btn11" style="border: none; background-color: red; box-shadow: 3px 3px 5px black; width: 20px;
+			<button data-toggle="modal" data-target="#playerModal" onclick="obj10.disStriker()" id="btn11" style="border: none; background-color: red; box-shadow: 3px 3px 5px black; width: 20px;
 		height: 20px; border-radius: 20px; color: white;"></button>
 	</div>
 	<br><br><br><br><br><br>
-<center>
-	<div id="result" style="background-color: red; width: 450px; height: 100px; color: white; margin-left: -50px;">
-	<p>You may wish to change the ability of your player&nbsp;&nbsp;&nbsp;<button onclick="disAppear()">&times;</button></p>
+<!-- <center>
+	<div class="modal" id="result" style="background-color: red; width: 450px; height: 100px; color: white; margin-left: -50px;">
+	
 </div>
-</center>
+</center> -->
+<div class="modal fade" id="playerModal">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header h5">
+				<p>You may wish to change the ability of your player</p>
+				<button class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body w-100" >
+				<div id="result" ></div>
+			</div>
+		</div>
+	</div>
+</div>
 
 	<script type="text/javascript" src="./myFootball.js" ></script>
 </body>
