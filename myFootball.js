@@ -5,51 +5,49 @@ class Keeper{
     Defense = 78;
     Dribble = 56;
     Speed = 40;
-    constructor(changedName){
-        this.changedName = changedName
-    }
-    disKeeper(){
+
+    disKeeper(changedName){
+        console.log(changedName)
         var data = "";
         data += "<table class='table-responsive' border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
-        var res = "<td>" + this.changedName == '' ? this.Name : this.changedName + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='obj.disKeeper()' class='btn btn-dark' >GK</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >DF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >MF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >SR</button>"  + "</td>";
+        var res = "<td>" + (changedName == undefined || "" ? this.Name : changedName) + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + `<button onclick='obj.disKeeper("${changedName !== undefined ? changedName : undefined}")' class='btn btn-dark' >GK</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj1.disDefend("${this.Name}")' >DF</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj5.midFielder("${this.Name}")' >MF</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj8.disStriker("${this.Name}")' >SR</button>`  + "</td>";
         var sumdata = "<tr>" + res + "</tr>";
         data += sumdata;
         result.innerHTML = data + "</table>";
     }
 }
-var obj = new Keeper('');
+var obj = new Keeper;
 class Defender{
     Name = "Jose Yobo";
-    constructor(Attack, Stamina, Defense, Dribble, Speed, changedName){
+    constructor(Attack, Stamina, Defense, Dribble, Speed){
         this.Attack = Attack;
         this.Stamina = Stamina;
         this.Defense = Defense;
         this.Dribble = Dribble;
         this.Speed = Speed;
-        this.changedName = changedName
     }
-    disDefend(){
+    disDefend(changedName){
         var data1 = "";
         data1 += "<table class='table-responsive' border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
-        var res1 = "<td>" + this.changedName == '' ? this.Name : this.changedName + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='obj.disKeeper()' class='btn btn-dark' >GK</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >DF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >MF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >SR</button>"  + "</td>";
+        var res1 = "<td>" + (changedName == undefined || "" ? this.Name : changedName) + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + `<button onclick='obj.disKeeper("${this.Name}")' class='btn btn-dark' >GK</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj1.disDefend("${changedName !== undefined ? changedName : undefined}")' >DF</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj5.midFielder("${this.Name}")' >MF</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj8.disStriker("${this.Name}")' >SR</button>`  + "</td>";
         var sumdata = "<tr>" + res1 + "</tr>";
         data1 +=sumdata;
         result.innerHTML = data1 + "</table>";
     }
 }
-var obj1 = new Defender(87, 90, 92, 60, 70, '');
+var obj1 = new Defender(87, 90, 92, 60, 70);
 class Defender2 extends Defender{
     Name = "Pogba Desa";
 }
-var obj2 = new Defender2(87, 90, 92, 60, 70, '');
+var obj2 = new Defender2(87, 90, 92, 60, 70);
 class Defender3 extends Defender{
     Name = "Ivon Ekong";
 }
-var obj3 = new Defender3(87, 90, 92, 60, 70, '');
+var obj3 = new Defender3(87, 90, 92, 60, 70);
 class Defender4 extends Defender{
     Name = "Temi Oke";
 }
-var obj4 = new Defender4(87, 90, 92, 60, 70, '');
+var obj4 = new Defender4(87, 90, 92, 60, 70);
 class Midfielder{
     Name = "Chuks Eno";
     constructor(Attack, Stamina, Defense, Dribble, Speed){
@@ -59,10 +57,10 @@ class Midfielder{
         this.Dribble = Dribble;
         this.Speed = Speed;
     }
-    midFielder(){
+    midFielder(changedName){
         var data2 = "";
         data2 += "<table class='table-responsive' border='1px' solid black><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
-        var res2 = "<td>" + this.Name + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='obj.disKeeper()' class='btn btn-dark' >GK</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >DF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >MF</button>"  + "</td>" + "<td>" + "<button class='btn btn-dark' >SR</button>"  + "</td>";
+        var res2 = "<td>" + (changedName == undefined || "" ? this.Name : changedName) + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + `<button onclick='obj.disKeeper("${this.Name}")' class='btn btn-dark' >GK</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj1.disDefend("${this.Name}")' >DF</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj5.midFielder("${changedName !== undefined ? changedName : undefined}")' >MF</button>`  + "</td>" + "<td>" + `<button class='btn btn-dark' onclick='obj8.disStriker("${this.Name}")' >SR</button>`  + "</td>";
         var sumdata = "<tr>" + res2 + "</tr>";
         data2 +=sumdata;
         result.innerHTML = data2 + "</table>";
@@ -95,10 +93,10 @@ class Striker{
         this.Dribble = Dribble;
         this.Speed = Speed;
     }
-    disStriker(){
+    disStriker(changedName){
         var data3 = "";
         data3 += "<table class='table-responsive' border='1px' solid black ><tr><th>Name</th><th>Attack</th><th>Stamina</th><th>Defense</th><th>Dribble</th><th>Speed</th><th>Opt</th><th>Opt</th><th>Opt</th><th>Opt</th></tr>";
-        var res3 = "<td>" + this.Name + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + "<button onclick='obj.disKeeper()' class='btn btn-dark' onclick='goalKeep()'>GK</button>"  + "</td>"  + "<td>" + "<button class='btn btn-dark' >DF</button>"  + "</td>"  + "<td>" + "<button class='btn btn-dark' >MF</button>"  + "</td>"  + "<td>" + "<button class='btn btn-dark' >SR</button>"  + "</td>";
+        var res3 = "<td>" + (changedName == undefined || "" ? this.Name : changedName) + "</td>" + "<td>" + this.Attack + "</td>" + "<td>" + this.Stamina + "</td>" + "<td>" + this.Defense + "</td>" + "<td>" + this.Dribble + "</td>" + "<td>" + this.Speed + "</td>" + "<td>" + `<button onclick='obj.disKeeper("${this.Name}")' class='btn btn-dark' >GK</button>`  + "</td>"  + "<td>" + `<button class='btn btn-dark' onclick='obj1.disDefend("${this.Name}")' >DF</button>`  + "</td>"  + "<td>" + `<button class='btn btn-dark' onclick='obj5.midFielder("${this.Name}")' >MF</button>`  + "</td>"  + "<td>" + `<button class='btn btn-dark' onclick='obj8.disStriker("${changedName !== undefined ? changedName : undefined}")' >SR</button>`  + "</td>";
         var sumdata = "<tr>" + res3 + "</tr>";
         data3 +=sumdata;
         result.innerHTML = data3 + "</table>";
