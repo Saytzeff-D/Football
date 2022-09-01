@@ -50,37 +50,37 @@ body{
 	margin-top: -380px;
 	border-radius: 150px;
 }
-#corner1{
+#topLeftCorner{
 	width: 40px;
 	height: 40px;
 	border: 5px solid white;
-	margin-top: -580px;
-	margin-left: 79px;
+	margin-top: -570px;
+	margin-left: 85px;
 	border-bottom-right-radius: 40px;
 }
-#corner2{
+#topRightCorner{
 	width: 40px;
 	height: 40px;
 	border: 5px solid white;
-	margin-left: 1238px;
-	margin-top: -50px;
+	margin-left: 1243px;
+	margin-top: -40px;
 	border-bottom-left-radius: 40px;
 }
-#corner3{
+#bottomLeftCorner{
 	width: 40px;
 	height: 40px;
 	border: 5px solid white;
-	margin-left: 78px;
-	margin-top: 480px;
+	margin-left: 85px;
+	margin-top: 490px;
 	border-top-right-radius: 40px; 
 }
 
-#corner4{
+#bottomRightCorner{
 	width: 40px;
 	height: 40px;
 	border: 5px solid white;
-	margin-left: 1238px;
-	margin-top: -50px;
+	margin-left: 1243px;
+	margin-top: -40px;
 	border-top-left-radius: 40px; 
 }
 #innerGoalPostLeft{
@@ -88,21 +88,21 @@ body{
 	height: 200px;
 	border: 5px solid white;
 	margin-top: -400px;
-	margin-left: 78px;
+	margin-left: 84px;
 }
 #outerGoalPostLeft{
 	width: 150px;
 	height: 300px;
 	border: 5px solid white;
-	margin-left: 78px;
-	margin-top: -255px;
+	margin-left: 84px;
+	margin-top: -240px;
 }
 
 #outerGoalPostRight{
 	width: 150px;
 	height: 300px;
 	border: 5px solid white;
-	margin-left: 1128px;
+	margin-left: 1133px;
 	margin-top: -310px;
 }
 #innerrGoalPostRight{
@@ -110,14 +110,14 @@ body{
 	height: 200px;
 	border: 5px solid white;
 	margin-top: -210px;
-	margin-left: 1178px;
+	margin-left: 1181px;
 }
 #semicircleLeft{
 	width: 65px;
 	height: 170px;
 	border: 5px solid white;
-	margin-left: 234px;
-	margin-top: -249px;
+	margin-left: 230px;
+	margin-top: -230px;
 	border-top-right-radius: 150px;
 	border-bottom-right-radius: 150px; 
 }
@@ -125,7 +125,7 @@ body{
 	width: 65px;
 	height: 170px;
 	border: 5px solid white;
-	margin-left: 1058px;
+	margin-left: 1073px;
 	margin-top: -176px;
 	border-top-left-radius: 150px;
 	border-bottom-left-radius: 150px; 
